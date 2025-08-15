@@ -1,0 +1,13 @@
+{
+  "name": "v3-basic-isolation",
+  "type": "module",
+  "scripts": {
+    "test": "node ./src/index.js"
+  },
+  "bin": {
+    "zest-v3": "./bin/cli.js"
+  },
+  "dependencies": {
+    "glob": "^11.0.3"
+  }
+}
