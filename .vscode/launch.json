@@ -24,20 +24,10 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Debug v3-0",
+            "name": "Debug v3",
             "runtimeExecutable": "yarn",
             "runtimeArgs": [
-                "v3-0"
-            ],
-            "console": "integratedTerminal"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Debug v3-1",
-            "runtimeExecutable": "yarn",
-            "runtimeArgs": [
-                "v3-1"
+                "v3"
             ],
             "console": "integratedTerminal"
         },

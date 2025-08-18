@@ -1785,25 +1785,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"v3-0-supporting-dependencies@workspace:v3-0-supporting-dependencies":
+"v3-supporting-dependencies@workspace:v3-supporting-dependencies":
   version: 0.0.0-use.local
-  resolution: "v3-0-supporting-dependencies@workspace:v3-0-supporting-dependencies"
-  dependencies:
-    glob: "npm:^11.0.3"
-  bin:
-    zest-v3-0: ./bin/cli.js
-  languageName: unknown
-  linkType: soft
-
-"v3-1-supporting-dependencies@workspace:v3-1-supporting-dependencies":
-  version: 0.0.0-use.local
-  resolution: "v3-1-supporting-dependencies@workspace:v3-1-supporting-dependencies"
+  resolution: "v3-supporting-dependencies@workspace:v3-supporting-dependencies"
   dependencies:
     "@babel/core": "npm:^7.24.0"
     "@babel/preset-env": "npm:^7.24.0"
     glob: "npm:^11.0.3"
   bin:
-    zest-v3-1: ./bin/cli.js
+    zest-v3: ./bin/cli.js
   languageName: unknown
   linkType: soft
 

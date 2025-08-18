@@ -1,13 +1,15 @@
 {
-  "name": "v3-0-supporting-dependencies",
+  "name": "v3-supporting-dependencies",
   "type": "module",
   "scripts": {
     "test": "node ./src/index.js"
   },
   "bin": {
-    "zest-v3-0": "./bin/cli.js"
+    "zest-v3": "./bin/cli.js"
   },
   "dependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
     "glob": "^11.0.3"
   }
 }
