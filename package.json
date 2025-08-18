@@ -4,15 +4,17 @@
   "workspaces": [
     "v1-file-hunter",
     "v2-assert-and-report",
-    "v3-basic-isolation",
-    "v3-0-parallelisation",
-    "v4-parallelisation",
-    "v5-full-isolation"
+    "v3-0-supporting-dependencies",
+    "v3-1-supporting-dependencies",
+    "v4-isolation",
+    "v5-parallelisation"
   ],
   "scripts": {
     "v1": "yarn workspace v1-file-hunter exec zest-v1",
     "v2": "yarn workspace v2-assert-and-report exec zest-v2",
-    "v3": "yarn workspace v3-basic-isolation exec zest-v3",
-    "v3-0": "yarn workspace v3-0-parallelisation exec zest-v3-0"
+    "v3-0": "yarn workspace v3-0-supporting-dependencies exec zest-v3-0",
+    "v3-1": "yarn workspace v3-1-supporting-dependencies exec zest-v3-1",
+    "v4": "yarn workspace v4-isolation exec zest-v4",
+    "v5": "yarn workspace v5-parallelisation exec zest-v5"
   }
 }

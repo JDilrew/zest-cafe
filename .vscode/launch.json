@@ -1,0 +1,65 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug v1",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": [
+                "v1"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug v2",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": [
+                "v2"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug v3-0",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": [
+                "v3-0"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug v3-1",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": [
+                "v3-1"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug v4",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": [
+                "v4"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug v5",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": [
+                "v5"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}

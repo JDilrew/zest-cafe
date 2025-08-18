@@ -1,5 +1,4 @@
 import fs from "fs";
-
 async function runTest(testFile) {
   const contents = await fs.promises.readFile(testFile, "utf8");
   const testResult = {
