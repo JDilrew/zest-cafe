@@ -6,13 +6,15 @@
     "v2-assert-and-report",
     "v3-supporting-dependencies",
     "v4-isolation",
-    "v5-parallelisation"
+    "v5-parallelisation",
+    "v6-mocking"
   ],
   "scripts": {
     "v1": "yarn workspace v1-file-hunter exec zest-v1",
     "v2": "yarn workspace v2-assert-and-report exec zest-v2",
     "v3": "yarn workspace v3-supporting-dependencies exec zest-v3",
     "v4": "yarn workspace v4-isolation exec zest-v4",
-    "v5": "yarn workspace v5-parallelisation exec zest-v5"
+    "v5": "yarn workspace v5-parallelisation exec zest-v5",
+    "v6": "yarn workspace v6-mocking exec zest-v6"
   }
 }
