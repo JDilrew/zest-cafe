@@ -1,6 +1,7 @@
 {
   "name": "zest-cafe",
   "packageManager": "yarn@4.9.2",
+  "type": "module",
   "workspaces": [
     "v1-file-hunter",
     "v2-assert-and-report",

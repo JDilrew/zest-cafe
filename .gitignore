@@ -15,3 +15,6 @@ node_modules
 
 #!.yarn/cache
 .pnp.*
+
+# Our simple haste map cache
+.haste-cache.json
