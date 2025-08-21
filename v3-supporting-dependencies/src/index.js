@@ -1,9 +1,9 @@
-import * as glob from "glob";
+import { generateMap } from "./hasteMap.js";
 import { runTest } from "./runner.js";
 import { expect } from "./matchers.js";
 globalThis.expect = expect;
 
-const testFiles = glob.sync("**/*.test.js");
+const testFiles = generateMap(".test.js").testFiles;
 
 // shuffle them in place (Fisher–Yates)
 for (let i = testFiles.length - 1; i > 0; i--) {

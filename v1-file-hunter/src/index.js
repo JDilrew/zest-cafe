@@ -7,8 +7,8 @@ const testFiles = map.testFiles;
 console.log(
   `haste-map:\n${JSON.stringify(
     {
-      dirtyFiles: map.dirtyFiles,
-      dirtyTests: map.dirtyTests,
+      staleFiles: map.staleFiles,
+      staleTests: map.staleTests,
       testFiles: map.testFiles,
     },
     null,

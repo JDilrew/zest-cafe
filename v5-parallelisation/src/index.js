@@ -1,7 +1,7 @@
-import * as glob from "glob";
+import { generateMap } from "./hasteMap.js";
 import { Worker } from "./worker.js";
 
-const testFiles = glob.sync("**/*.test.js");
+const testFiles = generateMap(".test.js").testFiles;
 const worker = new Worker("./src/runner.js");
 
 const promises = testFiles.map((file) => worker.run("runTest", file));

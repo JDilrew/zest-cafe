@@ -5,4 +5,4 @@
 
 # haste-map
 
-If you want to test the dirtyTests in the haste-map, you can simply add an unused import to the test file.
+If you want to test the staleTests in the haste-map, you can simply add an unused import to the test file.
