@@ -1,3 +1,3 @@
-import { add, count } from "../src/example.js";
+import { add, counter } from "../src/example.js";
 
-expect(add(count, 93)).toBe(93);
+expect(add(counter, 93)).toBe(93);

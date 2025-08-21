@@ -1,5 +1,5 @@
-import { add, count } from "../src/example.js";
+import { add, counter } from "../src/example.js";
 
-test("adding 27 to count equals 27", () => {
-  expect(add(count, 27)).toBe(27);
+test("adding 27 to counter equals 27", () => {
+  expect(add(counter, 27)).toBe(27);
 });

@@ -1,6 +1,7 @@
 import { generateMap } from "./hasteMap.js";
 import { runTest } from "./runner.js";
 import { expect } from "./matchers.js";
+
 globalThis.expect = expect;
 
 const testFiles = generateMap(".test.js").testFiles;

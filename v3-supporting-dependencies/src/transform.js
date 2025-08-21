@@ -1,7 +1,7 @@
 import { transformSync } from "@babel/core";
 
 function transpileToCommonJS(input, inputFilePath) {
-  const firstPass = transformSync(input, {
+  const transformedInput = transformSync(input, {
     presets: [
       [
         "@babel/preset-env",
@@ -14,7 +14,7 @@ function transpileToCommonJS(input, inputFilePath) {
     filename: inputFilePath,
   });
 
-  return firstPass.code;
+  return transformedInput.code;
 }
 
 export { transpileToCommonJS };

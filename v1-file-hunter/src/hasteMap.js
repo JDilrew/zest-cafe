@@ -82,12 +82,12 @@ function detectStaleTests(testFiles, staleFiles, filesMap) {
 }
 
 function generateMap(fileEnding) {
-  const cache = loadCache();
-  const files = crawl(ROOT);
+  const cache = loadCache(),
+    files = crawl(ROOT);
 
   // Build a new files map, reusing deps when mtime unchanged
-  const nextFiles = {};
-  const staleFiles = [];
+  const nextFiles = {},
+    staleFiles = [];
   for (const file of files) {
     const relativePath = path.relative(ROOT, file);
     const stat = fs.statSync(file);
