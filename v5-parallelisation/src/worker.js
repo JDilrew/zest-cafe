@@ -5,22 +5,25 @@ class Worker {
     this.workerFile = workerFile;
   }
 
-  run(jobName, payload) {
+  run(jobName, testFile) {
     return new Promise((resolve, reject) => {
       const child = fork(this.workerFile, [], {
         stdio: ["inherit", "inherit", "inherit", "ipc"],
       });
 
-      child.send({ jobName, payload });
+      child.send({ jobName, payload: testFile });
+
+      let results = [];
 
       child.on("message", (msg) => {
-        resolve(msg);
-        child.kill();
+        if (msg.event === "run_complete") {
+          results = msg.results;
+          resolve({ fileName: testFile, results });
+          child.kill();
+        }
       });
 
-      child.on("error", (err) => {
-        reject(err);
-      });
+      child.on("error", reject);
 
       child.on("exit", (code) => {
         if (code !== 0) {

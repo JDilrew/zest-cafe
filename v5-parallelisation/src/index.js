@@ -9,4 +9,16 @@ const promises = testFiles.map((file) => worker.run("runTest", file));
 // Kick off all jobs in parallel
 const results = await Promise.all(promises);
 
-console.log("Results:", results);
+for (const file of results) {
+  console.log(`\n📄 ${file.fileName}`);
+  for (const test of file.results) {
+    if (test.status === "passed") {
+      console.log(`  ✓ ${test.name}`);
+    } else if (test.status === "failed") {
+      console.log(`  ✗ ${test.name}`);
+      if (test.error) {
+        console.log(`    ↳ ${test.error}`);
+      }
+    }
+  }
+}
