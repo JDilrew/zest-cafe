@@ -17,8 +17,8 @@ async function run() {
   }
 }
 
-function resetTestState() {
+function reset() {
   tests = [];
 }
 
-export { test, expect, run, resetTestState };
+export { test, expect, run, reset };

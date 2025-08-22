@@ -16,7 +16,7 @@ async function runTest(testFile) {
   sandbox.global = sandbox.globalThis = sandbox;
   const testContext = vm.createContext(sandbox);
 
-  juiceEngine.resetTestState();
+  juiceEngine.reset();
 
   // Inject globals (engine + expect)
   testContext.globalThis.require = (m) =>

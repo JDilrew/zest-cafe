@@ -16,7 +16,7 @@ async function runTest(testFile) {
   sandbox.global = sandbox.globalThis = sandbox;
   const testContext = vm.createContext(sandbox);
 
-  juiceEngine.resetTestState();
+  juiceEngine.reset();
 
   // Inject globals (engine + expect)
   testContext.globalThis.require = (m) =>
@@ -36,10 +36,11 @@ async function runTest(testFile) {
       }
     );
 
+    // the test file then populates the test object in the juice engine
     const module = { exports: {}, require: testContext.require };
     fn(module, module.exports, module.require);
 
-    // Run the juice engine inside of the context
+    // Run the juice engine inside of the context, now that it contains our tests..
     await vm.runInContext("run()", testContext);
   } catch (ex) {
     console.error(`✗ ${testFile}`, ex);

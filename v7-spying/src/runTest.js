@@ -4,24 +4,7 @@ import vm, { compileFunction } from "vm";
 import { transpileToCommonJS } from "./transform.js";
 import * as juiceEngine from "./juice.js";
 import { ZestResolver } from "./resolver.js";
-
-function spyOn(obj, key) {
-  const original = obj[key];
-  if (typeof original !== "function") {
-    throw new TypeError(`${key} is not a function`);
-  }
-
-  function spy(...args) {
-    spy.calls.push(args);
-    return original.apply(this, args);
-  }
-
-  spy.calls = [];
-  spy.mockRestore = () => (obj[key] = original);
-
-  obj[key] = spy;
-  return spy;
-}
+import { spyOn } from "./spying.js";
 
 async function runTest(testFile) {
   const contents = await fs.promises.readFile(testFile, "utf8");
@@ -34,7 +17,7 @@ async function runTest(testFile) {
   sandbox.global = sandbox.globalThis = sandbox;
   const testContext = vm.createContext(sandbox);
 
-  juiceEngine.resetTestState();
+  juiceEngine.reset();
 
   // Inject globals (engine + expect)
   testContext.globalThis.require = (m) =>
