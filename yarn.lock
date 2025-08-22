@@ -1833,6 +1833,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"v7-spying@workspace:v7-spying":
+  version: 0.0.0-use.local
+  resolution: "v7-spying@workspace:v7-spying"
+  dependencies:
+    "@babel/core": "npm:^7.24.0"
+    "@babel/preset-env": "npm:^7.24.0"
+    glob: "npm:^11.0.3"
+  bin:
+    zest-v7: ./bin/cli.js
+  languageName: unknown
+  linkType: soft
+
 "which@npm:^2.0.1":
   version: 2.0.2
   resolution: "which@npm:2.0.2"

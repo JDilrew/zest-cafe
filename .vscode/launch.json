@@ -60,6 +60,16 @@
                 "v6"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug v7",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": [
+                "v7"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }
