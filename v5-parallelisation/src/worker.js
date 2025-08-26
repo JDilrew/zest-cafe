@@ -5,13 +5,13 @@ class Worker {
     this.workerFile = workerFile;
   }
 
-  run(jobName, testFile) {
+  run(testFile) {
     return new Promise((resolve, reject) => {
       const child = fork(this.workerFile, [], {
         stdio: ["inherit", "inherit", "inherit", "ipc"],
       });
 
-      child.send({ jobName, payload: testFile });
+      child.send(testFile);
 
       let results = [];
 
